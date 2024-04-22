@@ -1,11 +1,16 @@
 package sistemaamigosecreto;
 
-public abstract class Mensagem {
+public class Mensagem {
     private String texto;
     private String emailRemetente;
+    public String emailDestinatario;
     boolean anonima;
 
-    public Mensagem(String texto, String emailRemetente, boolean anonima){
+    public Mensagem(String texto, String emailRemetente, String emailDestinatario, boolean anonima){
+        this.texto = texto;
+        this.emailRemetente = emailRemetente;
+        this.anonima = anonima;
+        this.emailDestinatario = emailDestinatario;
 
     }
 
@@ -30,6 +35,6 @@ public abstract class Mensagem {
     }
 
     public boolean ehAnonima(){
-
+        return anonima;
     }
 }
